@@ -53,7 +53,8 @@ app.configure(function() {
 
 
 //Start server
-var port = 4011;
+var port = process.env.PORT || 3000;
+
 app.listen(port, function() {
     console.log('Express server listening on port %d in %s mode', port, app.settings.env);
 });
